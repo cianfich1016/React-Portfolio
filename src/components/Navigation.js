@@ -19,7 +19,7 @@ const styles ={
     }
 
 }
-function Navigation({currentPage, handlePageChange}){
+function Navigation(){
     return(
         <div>
             <nav className="navbar navbar-expand-lg">
@@ -30,16 +30,16 @@ function Navigation({currentPage, handlePageChange}){
                 <div style = {styles.bar} class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a style = {styles.nav} class="nav-link" href="/about" className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>About Me</a>
+                            <a style = {styles.nav} class="nav-link" href="/about">About Me</a>
                         </li>
                         <li class="nav-item">
-                            <a style = {styles.nav} class="nav-link" href="/portfolio" className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}>Portfolio</a>
+                            <a style = {styles.nav} class="nav-link" href="/portfolio" >Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a style = {styles.nav} class="nav-link" href="/contact" className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>Contact Me</a>
+                            <a style = {styles.nav} class="nav-link" href="/contact">Contact Me</a>
                         </li>
                         <li class="nav-item">
-                            <a style = {styles.nav} class="nav-link" href="/resume" className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}>Resume</a>
+                            <a style = {styles.nav} class="nav-link" href="/resume">Resume</a>
                         </li>
                     </ul>
                 </div>
