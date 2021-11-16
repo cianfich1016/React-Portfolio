@@ -10,9 +10,14 @@ function Header(){
 
     useEffect(() => {
         // check the url 
-        if (window.location.pathname === '/portfolio') {
+        if (window.location.pathname === '/about') {
+            setCurrentPage('About')
+        }else if (window.location.pathname === '/portfolio') {
             setCurrentPage('Portfolio')
-        }
+        }else if (window.location.pathname === '/contact') {
+            setCurrentPage('Contact')
+        }else if (window.location.pathname === '/resume') {
+            setCurrentPage('Resume')}
     }, [])
     
     const renderPage = () => {
