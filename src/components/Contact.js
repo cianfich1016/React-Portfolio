@@ -40,7 +40,7 @@ function Contact(){
                     </div>
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" placeholder="Email"class="form-control"/>
+                            <input type="email" id="email" name="email" placeholder="Email"class="form-control"/>
                             <label></label>
                         </div>
                     </div>

@@ -9,13 +9,14 @@ p, h2, h6, textarea, a, input, h5 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-footer {
-    bottom: 0rem;
+footer { 
+    position: absolute;
+    margin-bottom: 0px;
     background-color:#3A3B3C;
     height: 80px;
     width: 100%;
 }
 
-div{
-    overflow-y: scroll;
+a.active {
+    color: red !important;
 }

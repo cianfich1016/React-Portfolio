@@ -1,5 +1,4 @@
 import React from 'react';
-import "./style.css"
 
 const styles ={
     header: {
@@ -20,7 +19,7 @@ const styles ={
     }
 
 }
-function Navigation(){
+function Navigation({currentPage, handlePageChange}){
     return(
         <div>
             <nav className="navbar navbar-expand-lg">
@@ -30,11 +29,11 @@ function Navigation(){
                 </button>
                 <div style = {styles.bar} class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a style = {styles.nav} class="nav-link" href="/about" >About Me</a>
+                        <li class="nav-item">
+                            <a style = {styles.nav} href="/about" onClick={() => handlePageChange('About')} className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>About Me</a>
                         </li>
                         <li class="nav-item">
-                            <a style = {styles.nav} class="nav-link" href="/portfolio">Portfolio</a>
+                            <a style = {styles.nav} class="nav-link" href="/portfolio" onClick={(event) => {event.preventDefault(); handlePageChange('Portfolio'); window.history.pushState("Portfolio", "Portfolio", "/portfolio")}} className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}>Portfolio</a>
                         </li>
                         <li class="nav-item">
                             <a style = {styles.nav} class="nav-link" href="/contact">Contact Me</a>
