@@ -1,14 +1,16 @@
 import React from "react";
+
 const styles ={
     card: {
-        width: "20rem",
-        margin: 25,   
+        width: "18rem",
+        margin: 20,   
     },
     container: {
         display: "flex",
         justifyContent: "space-around", 
         flexFlow: "row wrap",
-        marginTop: 15,
+        marginTop: 0,
+        marginBottom: 70
     },
     text: {
         color: "#3A3B3C", 

@@ -7,14 +7,14 @@ const styles = {
        
    },
     image: {
-        padding: 4,
-        margin: 10,
+        padding: 2,
+        margin: 5,
     }
 }
 
 function Footer() {   
     return (
-    <div style ={styles.position}>
+    <div>
         <footer >
             <a href="https://www.linkedin.com/in/rachel-cianfichi-1aa06721a/"><img style={styles.image} src="https://img.icons8.com/external-justicon-flat-justicon/48/000000/external-linkedin-social-media-justicon-flat-justicon.png" alt="LinkedIn"/></a>
             
