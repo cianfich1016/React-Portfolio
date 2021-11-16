@@ -1,0 +1,21 @@
+.navbar{
+    background-color:#3A3B3C;
+    height: 120px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+p, h2, h6, textarea, a, input, h5 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer {
+    bottom: 0rem;
+    background-color:#3A3B3C;
+    height: 80px;
+    width: 100%;
+}
+
+div{
+    overflow-y: scroll;
+}
