@@ -3,7 +3,7 @@ import Navigation from "./Navigation"
 
 
 function Header(){  
-    const [currentPage, setCurrentPage] = useState('About');
+    const [currentPage, setCurrentPage] = useState('Home');
     const handlePageChange = (page) => setCurrentPage(page);
 
     return(

@@ -25,9 +25,6 @@ function Navigation({currentPage, handlePageChange}){
         <div>
             <nav className="navbar navbar-expand-lg">
                 <h1 style = {styles.header} className="navbar-brand" href="/">Rachel Cianfichi</h1>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div style = {styles.bar} class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
