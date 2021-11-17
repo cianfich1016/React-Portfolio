@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const styles ={
     header: {
@@ -19,7 +20,7 @@ const styles ={
     }
 
 }
-function Navigation(){
+function Navigation({currentPage, handlePageChange}){
     return(
         <div>
             <nav className="navbar navbar-expand-lg">
@@ -30,16 +31,16 @@ function Navigation(){
                 <div style = {styles.bar} class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a style = {styles.nav} class="nav-link" href="/about">About Me</a>
+                            <Link style = {styles.nav} class="nav-link" to="/about" onClick={() => handlePageChange('About')} className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>About Me</Link>
                         </li>
                         <li class="nav-item">
-                            <a style = {styles.nav} class="nav-link" href="/portfolio" >Portfolio</a>
+                            <Link style = {styles.nav} class="nav-link" to="/portfolio" onClick={() => handlePageChange('Portfolio')}className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}>Portfolio</Link>
                         </li>
                         <li class="nav-item">
-                            <a style = {styles.nav} class="nav-link" href="/contact">Contact Me</a>
+                            <Link style = {styles.nav} class="nav-link" to="/contact" onClick={() => handlePageChange('Contact')} className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>Contact Me</Link>
                         </li>
                         <li class="nav-item">
-                            <a style = {styles.nav} class="nav-link" href="/resume">Resume</a>
+                            <Link style = {styles.nav} class="nav-link" to="/resume" onClick={() => handlePageChange('Resume')} className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}>Resume</Link>
                         </li>
                     </ul>
                 </div>

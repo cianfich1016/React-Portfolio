@@ -18,7 +18,10 @@ function App() {
     <div className="App">
       <Header />
           <Switch>
-              <Route path="/about" exact>
+            <Route exact path="/">
+                <About />
+              </Route>
+              <Route path="/about">
                 <About />
               </Route>
               <Route path="/portfolio">
@@ -30,10 +33,7 @@ function App() {
               <Route path="/resume">
                 <Resume />
               </Route>
-              <Route path="/">
-                <About />
-              </Route>
-          </Switch> 
+            </Switch> 
       <Footer />
     </div>
     </Router>
