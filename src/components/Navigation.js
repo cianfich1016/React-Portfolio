@@ -18,8 +18,8 @@ const styles ={
         textDecoration: "underline",
         padding: 10,
     }
+};
 
-}
 function Navigation({currentPage, handlePageChange}){
     return(
         <div>

@@ -1,5 +1,7 @@
+//Import React
 import React from "react";
 
+//Inline sytling
 const styles ={
     card: {
         width: "18rem",
@@ -16,17 +18,16 @@ const styles ={
         color: "#3A3B3C", 
     },
     links: {
-        backgroundColor: "#3A3B3C",
-        
+        backgroundColor: "#3A3B3C",  
     },
     link: {
         color: "cyan"
     }
-}
+};
 
 function Portfolio(){
+    {/*Card for each project*/}
     return(
-
         <div style={styles.container}>
             <div class="card" style={styles.card}>
             <img class="card-img-top" src="https://user-images.githubusercontent.com/89173968/135728428-03d061c8-c073-4b4b-8167-7a74e4c631a1.png" alt="The Musical Time Machine"/>
@@ -97,6 +98,6 @@ function Portfolio(){
         </div>
         
     )
-}
-
+};
+//Export function
 export default Portfolio;

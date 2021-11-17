@@ -1,6 +1,8 @@
+//Import React and css style sheet
 import React from 'react';
 import "./style.css"
 
+//Inline styling
 const styles = {
    position: {
        position: 'relative',
@@ -15,6 +17,7 @@ const styles = {
 function Footer() {   
     return (
     <div>
+        {/*Images that link to various social media/professional accounts inside footer*/}
         <footer >
             <a href="https://www.linkedin.com/in/rachel-cianfichi-1aa06721a/"><img style={styles.image} src="https://img.icons8.com/external-justicon-flat-justicon/48/000000/external-linkedin-social-media-justicon-flat-justicon.png" alt="LinkedIn"/></a>
             
@@ -24,6 +27,7 @@ function Footer() {
         </footer>
     </div>
     )
-}
+};
 
+//Export function
 export default Footer;
