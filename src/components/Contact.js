@@ -13,7 +13,11 @@ const styles = {
         color: "#3A3B3C"
     },
     form:{
+        padding: 20,
         marginLeft: 30,
+        boxShadow: "0 4px 10px 0 rgba(0,0,0,0.9)",
+        marginRight: 30,
+        borderRadius: "20px"
     },
     contact:{
         marginRight: 30
