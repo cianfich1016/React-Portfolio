@@ -34,7 +34,7 @@ function Navigation({currentPage, handlePageChange}){
                             <Link style = {styles.nav} class="nav-link" to="/portfolio" onClick={() => handlePageChange('Portfolio')}className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}>Portfolio</Link>
                         </li>
                         <li class="nav-item">
-                            <Link style = {styles.nav} class="nav-link" to="/contact" onClick={() => handlePageChange('Contact')} className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>Contact Me</Link>
+                            <Link style = {styles.nav} class="nav-link" to="/contact" onClick={() => handlePageChange('Contact')} className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>Contact</Link>
                         </li>
                         <li class="nav-item">
                             <Link style = {styles.nav} class="nav-link" to="/resume" onClick={() => handlePageChange('Resume')} className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}>Resume</Link>
