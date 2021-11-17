@@ -41,7 +41,7 @@ function Contact(){
             // Preventing the default behavior of the form submit (which is to refresh the page)
             e.preventDefault();
         
-            // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
+            // First we check to see if the email is not valid. If so we set an error message to be displayed on the page.
             if (!validateEmail(email)) {
               setErrorMessage('Email is invalid. Please try again!');
               return;
