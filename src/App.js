@@ -8,7 +8,7 @@ import Resume from "./components/Resume"
 import "./components/style.css"
 import {
   BrowserRouter as Router,
-  Switch,
+  HashRouter,
   Route,
 } from "react-router-dom";
 
@@ -16,10 +16,10 @@ function App() {
 
 
   return (
-    <Router>
+    <HashRouter>
     <div className="App">
       <Header />
-          <Switch>
+          
               <Route path="/about">
                 <About />
               </Route>
@@ -32,13 +32,13 @@ function App() {
               <Route path="/resume">
                 <Resume />
               </Route>
-              <Route path="/">
+              <Route exact path="/">
                 <About />
               </Route>
-            </Switch> 
+            
       <Footer />
     </div>
-    </Router>
+    </HashRouter>
   );
 }
 
