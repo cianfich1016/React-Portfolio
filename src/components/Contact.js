@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./style.css";
 import { validateEmail } from '../utils/helpers';
 
@@ -26,15 +26,19 @@ function Contact(){
     const [email, setEmail] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
+  
+       
+
     const handleInputChange = (e) => {
         // Getting the value and name of the input which triggered the change
         const { target } = e;
         const inputType = target.name;
         const inputValue = target.value;
 
+        
         if (inputType === 'email') {
             setEmail(inputValue);
-        }
+            }
         };
 
         const handleFormSubmit = (e) => {
@@ -45,6 +49,9 @@ function Contact(){
             if (!validateEmail(email)) {
               setErrorMessage('Email is invalid. Please try again!');
               return;
+            } else {
+                setErrorMessage('')
+                return;
             }
         }
         
