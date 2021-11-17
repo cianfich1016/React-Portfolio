@@ -2,6 +2,7 @@
 import React from 'react';
 import "./style.css"
 
+//Inline styling
 const styles = {
     skill: {
         color: "#3A3B3C",

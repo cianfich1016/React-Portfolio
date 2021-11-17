@@ -26,7 +26,7 @@ const styles ={
 };
 
 function Portfolio(){
-    {/*Card for each project*/}
+    {/*Card for each project with inline styling*/}
     return(
         <div style={styles.container}>
             <div class="card" style={styles.card}>

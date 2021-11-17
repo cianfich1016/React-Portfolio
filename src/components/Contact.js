@@ -1,7 +1,9 @@
-import React, {useEffect, useState} from 'react';
+//Import styles, validateEmail helper and React and useState destructured from react
+import React, {useState} from 'react';
 import "./style.css";
 import { validateEmail } from '../utils/helpers';
 
+//Inline styling
 const styles = {
     title: {
         marginTop: 20,
@@ -23,11 +25,9 @@ const styles = {
 }
 
 function Contact(){
+    //Set state of email and error message to null as page loads
     const [email, setEmail] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-
-  
-       
 
     const handleInputChange = (e) => {
         // Getting the value and name of the input which triggered the change
@@ -35,17 +35,16 @@ function Contact(){
         const inputType = target.name;
         const inputValue = target.value;
 
-        
         if (inputType === 'email') {
             setEmail(inputValue);
             }
         };
 
         const handleFormSubmit = (e) => {
-            // Preventing the default behavior of the form submit (which is to refresh the page)
+            //Prevent default upon submitting form, which is refreshing page
             e.preventDefault();
         
-            // First we check to see if the email is not valid. If so we set an error message to be displayed on the page.
+            // Check validity of email. If not, set error message to first string. Otherwise message is set to null.
             if (!validateEmail(email)) {
               setErrorMessage('Email is invalid. Please try again!');
               return;
@@ -61,6 +60,7 @@ function Contact(){
                 <h2 style ={styles.title} class="h1-responsive font-weight-bold text-center my-4">Contact Me</h2>
                 <p style={styles.text}class="text-center w-responsive mx-auto mb-5">Have any questions or feedback? I would love to hear!</p>
 
+                {/*Return contact form*/}
                 <div style={styles.form}class="row">
                     <div class="col-md-9 mb-md-0 mb-5">
                         <form id="contact-form" name="contact-form" action="mail.php" method="POST">
@@ -88,41 +88,34 @@ function Contact(){
                                 </div>
                             </div> 
                         </form>
-
                         <div class="text-center text-md-left">
                             <a style={styles.button}class="btn" onClick={handleFormSubmit}>Send</a>
                         </div>
                         <div class="status"></div>
                     </div>
-                
                     <div class="col-md-3 text-center">
                         <ul style={styles.contact} class="list-unstyled mb-0">
                             <li><i class="fas fa-map-marker-alt fa-2x"></i>
                                 <p style={styles.text}>Kissimmee, FL 34746 USA</p>
                             </li>
-
                             <li><i class="fas fa-phone mt-4 fa-2x"></i>
                                 <p style={styles.text}>919-830-5120</p>
                             </li>
-
                             <li><i class="fas fa-envelope mt-4 fa-2x"></i>
                                 <p style={styles.text}>cianfich@gmail.com</p>
                             </li>
                         </ul>
                     </div>
-
                 </div>
-
             </section>
-
+            {/*Return format for error message*/}
             {errorMessage && (
                 <div>
                     <p className="error-text">{errorMessage}</p>
                 </div>
             )}
-
         </div>
     )
 }
-
+//Export function
 export default Contact;
