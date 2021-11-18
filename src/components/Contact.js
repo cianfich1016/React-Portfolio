@@ -90,12 +90,12 @@ function Contact(){
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="name" name="name" onChange={handleInputChange}placeholder="Name" class="form-control"/>
+                                        <input type="text" id="name" name="name" onBlur={handleInputChange}placeholder="Name" class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="email" id="email" name="email" onChange={handleInputChange} placeholder="Email"class="form-control"/>
+                                        <input type="email" id="email" name="email" onBlur={handleInputChange} placeholder="Email"class="form-control"/>
                                         <label></label>
                                     </div>
                                 </div>
@@ -104,7 +104,7 @@ function Contact(){
                                 <div class="col-md-12">
                                 
                                     <div class="md-form">
-                                        <textarea type="text" id="message" name="message" onChange={handleInputChange}rows="2" class="form-control md-textarea" placeholder="Message"></textarea>
+                                        <textarea type="text" id="message" name="message" onBlur={handleInputChange}rows="2" class="form-control md-textarea" placeholder="Message"></textarea>
                                         <label></label>
                                     </div>
                                 </div>
