@@ -8,16 +8,25 @@ const styles = {
         marginTop: 20,
         marginRight: 100,
         marginLeft: 100,
-        color: "#3A3B3C"
+        color: "#3A3B3C",
+        padding: 4
     },
     image: {
-        marginTop: 40,
-    }   
+        marginTop: 30,
+    },
+    container: {
+        boxShadow: "0 4px 10px 0 rgba(0,0,0,0.9)",
+        borderRadius: "20px",
+        marginLeft: "30px",
+        marginRight: "30px",
+        marginTop: 20,
+        backgroundColor: "white",
+    } 
 };
 
 function About() {   
     return (
-        <div>
+        <div style={styles.container}>
             {/*Personal image using Cloudinary npm package*/}
             <img style={styles.image} src="https://res.cloudinary.com/dndp5yqyt/image/upload/ar_1:1,b_rgb:f9f9f9,bo_5px_solid_rgb:3A3B3C,c_fill,g_auto,h_230,r_20,w_230/v1637013191/Portfolio/self_rg4g6r.jpg" /> 
             {/*Paragraph summary about me*/}

@@ -17,7 +17,8 @@ const styles = {
         marginLeft: 30,
         boxShadow: "0 4px 10px 0 rgba(0,0,0,0.9)",
         marginRight: 30,
-        borderRadius: "20px"
+        borderRadius: "20px",
+        backgroundColor: "white",
     },
     contact:{
         marginRight: 30

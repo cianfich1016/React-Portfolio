@@ -6,17 +6,25 @@ import "./style.css"
 const styles = {
     skill: {
         color: "#3A3B3C",
-        marginTop: 40,   
+        marginTop: 40,  
+        padding: 10, 
     },
     resume: {
         color: "#3A3B3C",
         marginTop: 40, 
+    },
+    image: {
+        boxShadow: "0 4px 10px 0 rgba(0,0,0,0.9)",
+        borderRadius: "20px",
+        marginLeft: "30px",
+        marginRight: "30px",
+        backgroundColor: "white",
     }
 }
 
 function Resume(){
     return(
-        <div>
+        <div style={styles.image}>
             <h2 style={styles.skill}>Skills</h2>
             
             <h6><u>Programming Languages/Libraries & Frameworks:</u> JavaScript, Node.js, Express.js, React, HTML, CSS</h6>

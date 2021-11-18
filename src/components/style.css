@@ -28,3 +28,7 @@ html {
 a.active {
     color:white !important;
 }
+
+body{
+  background-color: cyan !important;
+}
