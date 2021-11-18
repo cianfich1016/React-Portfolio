@@ -30,34 +30,31 @@ const styles = {
 }
 
 function Contact(){
-    //Set state of email and error message to null as page loads
-    const [email, setEmail] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+    //Set state for form and error message
+    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
 
-    const handleInputChange = (e) => {
-        // Getting the value and name of the input which triggered the change
-        const { target } = e;
-        const inputType = target.name;
-        const inputValue = target.value;
+    const [errorMessage, setError] = useState('');
 
-        if (inputType === 'email') {
-            setEmail(inputValue);
+    const { name, email, message } = formState;
+
+    function handleInputChange(e) {
+        if (e.target.name === 'email') {
+            const isValid = validateEmail(e.target.value);
+                if(!isValid) {
+                    setError('Email is not valid. Please try again!');
+                } else {
+                    setError('');
+                }
+        }
+        if (!errorMessage) {
+            setFormState({...formState, [e.target.name]: e.target.value })
             }
-        };
+        }
 
         const handleFormSubmit = (e) => {
             //Prevent default upon submitting form, which is refreshing page
             e.preventDefault();
-        
-            // Check validity of email. If not, set error message to first string. Otherwise message is set to null.
-            if (!validateEmail(email)) {
-              setErrorMessage('Email is invalid. Please try again!');
-              return;
-            } else {
-                setErrorMessage('')
-                return;
-            }
-        }
+        };
         
     return(
         <div>
@@ -73,7 +70,7 @@ function Contact(){
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="name" name="name" placeholder="Name" class="form-control"/>
+                                        <input type="text" id="name" name="name" onChange={handleInputChange}placeholder="Name" class="form-control"/>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -87,7 +84,7 @@ function Contact(){
                                 <div class="col-md-12">
                                 
                                     <div class="md-form">
-                                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Message"></textarea>
+                                        <textarea type="text" id="message" name="message" onChange={handleInputChange}rows="2" class="form-control md-textarea" placeholder="Message"></textarea>
                                         <label></label>
                                     </div>
                                 </div>
