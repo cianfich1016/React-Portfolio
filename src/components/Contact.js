@@ -38,6 +38,10 @@ function Contact(){
     const { name, email, message } = formState;
 
     function handleInputChange(e) {
+        const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+
         if (e.target.name === 'email') {
             const isValid = validateEmail(e.target.value);
                 if(!isValid) {
@@ -45,7 +49,23 @@ function Contact(){
                 } else {
                     setError('');
                 }
-        }
+        };
+        if (e.target.name === 'name') {
+            console.log(e.target.value)
+                if(e.target.value==='') {
+                    setError('Name is not valid. Please try again!');
+                } else {
+                    setError('');
+                }
+        };
+        if (e.target.name === 'message') {
+            if(inputValue==='') {
+                setError('Message is not valid. Please try again!');
+            } else {
+                setError('');
+            }
+    }
+
         if (!errorMessage) {
             setFormState({...formState, [e.target.name]: e.target.value })
             }
