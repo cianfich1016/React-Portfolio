@@ -15,7 +15,7 @@
   After cloning application, run "npm install" to use it locally.
 
   ## Usage
-  Run "npm start" to view application on a local host or click [here](https://cianfich1016.github.io/React-Portfolio/#/about) to view the live deployed link. 
+  Run "npm start" to view application on a local host or click [here](https://react-portfolio-1016.herokuapp.com/#/) to view the live deployed link. 
 
   Images of portfolio:
 
